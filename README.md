@@ -18,15 +18,17 @@ NB: This project is not yet completed.
 1. Install the latest version of Python.
 
 2. Clone this project's repository using the following command:
+   
    git clone https://github.com/dataExplorer77/finalCapstone
 
-3. Install the required packages:
+4. Install the required packages:
    - numpy
    - pandas
    - spacy
    - textblob
 
-4. Download the SpaCy model:
+5. Download the SpaCy model:
+   
    -m spacy download en_core_web_sm"
 
 
