@@ -26,7 +26,8 @@ NB: This project is not yet completed.
    - spacy
    - textblob
 
-4. Download the SpaCy model -m spacy download en_core_web_sm
+4. Download the SpaCy model:
+   -m spacy download en_core_web_sm"
 
 
 ### How to use
