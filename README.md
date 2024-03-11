@@ -34,7 +34,6 @@ NB: This project is not yet completed.
 
 ### How to use
 
-(program not yet ready)
 
 
 ### Credits
