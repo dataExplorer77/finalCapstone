@@ -3,7 +3,7 @@
 This repository is for a HyperionDev capstone project in which I use Python code to 
 conduct NLP sentiment analysis of a dataset of Amazon product reviews to help establish
 if the sentiment of the product reviews is positive, negative or neutral. The program
-also has a feature that compares the similarities between two reviews.
+also has a feature that compares the similarities between the two reviews.
 
 
 
@@ -43,12 +43,15 @@ also has a feature that compares the similarities between two reviews.
 
 ### The program then uses Spacy to clean and preprocess the data.  
 
+![Function To Preprocess Data](https://github.com/dataExplorer77/finalCapstone/blob/main/Function%20To%20Preprocess%20Data.jpg?raw=true)
+
 ![Cleaning & Preprocessing The Data](https://github.com/dataExplorer77/finalCapstone/blob/main/Cleaning%20&%20Preprocessing%20The%20Data.jpg?raw=true)
 
 
 ### The program then uses TextBlob for sentiment analysis, based on polarity. 
 
-![Applying Sentiment Analysis](https://github.com/dataExplorer77/finalCapstone/blob/main/Cleaning%20&%20Preprocessing%20The%20Data.jpg?raw=true)
+![Function To Analyze Sentiment](https://github.com/dataExplorer77/finalCapstone/blob/main/Function%20To%20Analyze%20Sentiment.jpg?raw=true)
+![Applying Sentiment Analysis](https://github.com/dataExplorer77/finalCapstone/blob/main/Testing%20Accuracy%20of%20Sentiment%20Analysis.jpg?raw=true)
 
 
 ### A test is then done to test the accuracy of the sentiment analysis.
