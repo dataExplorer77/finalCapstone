@@ -64,7 +64,7 @@ print("\n\nExamples of neutral reviews:")
 print(neutral_reviews.head(3))
 
 
-# Comparing similarity 
+# Comparing similarity
 
 comparison_review_1 = nlp(amazon_data["reviews.text"][2])
 comparison_review_2 = nlp(amazon_data["reviews.text"][6])
