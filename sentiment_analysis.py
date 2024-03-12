@@ -1,21 +1,18 @@
 
 # Importing packages needed for script
-import numpy as np
 import pandas as pd
 import spacy
+from textblob import TextBlob
+
 
 # Loading SpaCy package
 nlp = spacy.load("en_core_web_sm")
-
-# Importing textblob
-from textblob import TextBlob
 
 
 # Function to preprocess data
 def preprocess(text):
     doc = nlp(text.lower().strip())
     return " ".join([token.text for token in doc if not (token.is_stop or token.is_punct)])
-
 
 # Function to analyze sentiment
 def analyze_sentiment(review):
@@ -38,11 +35,13 @@ def analyze_sentiment(review):
 # Creating pandas data frame
 amazon_data = pd.read_csv('amazon_product_reviews.csv')
 
+
 # Isolating the "reviews" column and dropping NaN values
 reviews_data = amazon_data["reviews.text"].dropna()
 
-# Creating a new column and applying the preprocessing function
+# Creating a new column and applying the preprocessing function     
 amazon_data["cleaned_preprocessed_reviews"] = reviews_data.apply(preprocess)
+
 
 # Creating a new column and applying the sentiment analysis function
 amazon_data["sentiment_analysis"] = amazon_data["cleaned_preprocessed_reviews"].apply(analyze_sentiment)
@@ -56,26 +55,24 @@ positive_reviews = amazon_data[amazon_data["sentiment_analysis"] == "positive"][
 print("Examples of positive reviews:")
 print(positive_reviews.head(3))
 
-
 negative_reviews = amazon_data[amazon_data["sentiment_analysis"] == "negative"]["reviews.text"]
 print("\n\nExamples of negative reviews:")
 print(negative_reviews.head(3))
-
 
 neutral_reviews = amazon_data[amazon_data["sentiment_analysis"] == "neutral"]["reviews.text"]
 print("\n\nExamples of neutral reviews:")
 print(neutral_reviews.head(3))
 
+
 # Comparing similarity 
 
 comparison_review_1 = nlp(amazon_data["reviews.text"][2])
-
 comparison_review_2 = nlp(amazon_data["reviews.text"][6])
 
 similarity_score = comparison_review_1.similarity(comparison_review_2)
 
 print(f"""
       
-The similarity score between review 2 and review 6 = {similarity_score}.""")
+The similarity score between review 2 and review 6 = {similarity_score}.
 
-"""
+""")
